@@ -18,13 +18,13 @@ const ShowBook = () => {
   });
   
   return (
-    <div className='p-4'>
+    <div className='p-4 justify-content-center '>
       <BackButton/>
       <h1 className='text-3x1 my-4'> show Book</h1>
       {loading?(
         <Spinner/>
-      ):(
-        <div className='flex flex-col border-2 border-sky-400 rounded-x1 w-fit p-4'>
+      ):(<div className='flex justify-center items-center'>
+        <div className='flex flex-col border-2 border-sky-400 rounded-xl w-flex p-4 mx-auto'>
           <div className='my-4'>
             <span className='text-x1 mr-4 text-gray-500'>Id</span>
             <span>{book.id}</span>
@@ -49,6 +49,7 @@ const ShowBook = () => {
             <span className='text-x1 mr-4 text-gray-500'>Last Update Time</span>
             <span>{new Date(book.updatedAt).toString()}</span>
           </div>
+        </div>
         </div>
       )}
     </div>
